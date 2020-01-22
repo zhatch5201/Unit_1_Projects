@@ -34,11 +34,6 @@ var randomQ = randomInt(0, 9);
 var quoteElem = document.querySelector('quote');
 quoteElem.innerHTML = getQuote(randomQ);
 function randomInt(lowest, size) {
-	var randInt = Math.floor(Math.random() * 10);
-	// console.log(randInt);
-	if (randInt > size || randInt < lowest) {
-		randomInt(0, 9);
-		// console.log(randomInt);
-	}
+	var randInt = Math.floor(Math.random() * size + lowest);
 	return randInt;
 }
